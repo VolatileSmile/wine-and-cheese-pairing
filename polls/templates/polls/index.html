@@ -1,0 +1,21 @@
+<!-- In general, extend a file to use its code as a base for multiple templates and 
+    include a file to load a single section of code within the context of another template. -->
+    {% extends 'polls/base.html' %}
+
+    {% block content %}
+
+    {% if request.user.is_authenticated %}
+        <h1>What's cookin, {{ user.username }} ;)</h1>
+        {% if latest_question_list %}
+            <ul>
+            {% for question in latest_question_list %}
+                <li><a href="/polls/{{ question.id }}/"> {{ question.question_text }}</a></li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+
+    {% else %}
+            <h1> You gotta log in first man!11!1!!!!</h1>
+    {% endif %}
+
+    {% endblock %}
