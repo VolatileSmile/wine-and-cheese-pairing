@@ -33,9 +33,6 @@ ALLOWED_HOSTS = [
     'stormy-wildwood-51505.herokuapp.com'
 ]
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -144,3 +141,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/polls/'
 LOGOUT_REDIRECT_URL = '/polls/'
 ACCOUNT_SIGNUP_REDIRECT_URL = '/polls/'
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
