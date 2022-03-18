@@ -27,4 +27,8 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
     def __str__(self):
         return self.choice_text
-    
+
+#class Profile(models.Model):
+    #profile model here
+    #define stuff in model
+    #Extend the built-in Django User model to include other fields like age, gender, birthday)

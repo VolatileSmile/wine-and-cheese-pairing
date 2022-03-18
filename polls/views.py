@@ -1,4 +1,3 @@
-from cProfile import Profile
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Question
 from django.http import Http404
@@ -8,7 +7,6 @@ from django.views import generic
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
-
 from .models import Question, Choice
 
 class UserLoginView(LoginView):
@@ -40,7 +38,7 @@ class ResultsView(LoginRequiredMixin,generic.DetailView):
 
 # class ProfileView(LoginRequiredMixin,generic,DetailView):
 #     model = Profile
-#     template_name = 'registration.profile.html'
+#     template_name = 'registration/profile.html'
 
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
@@ -59,4 +57,3 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
-
