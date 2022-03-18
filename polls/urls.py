@@ -17,6 +17,6 @@ urlpatterns = [
     ),
     path('accounts/login/', auth_views.LoginView.as_view(template_name='polls/login.html')),
     path('accounts/logout/', auth_views.LogoutView.as_view(), name="logout"),
-    path('accounts/profile/', auth_views.ProfileView.as_view(template_name='registration/profile.html')),
+    #path('accounts/profile/', auth_views.ProfileView.as_view(template_name='registration/profile.html')),
     path("signup/", views.SignUpView.as_view(), name="signup"),
 ]
