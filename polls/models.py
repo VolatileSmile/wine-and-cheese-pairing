@@ -32,3 +32,4 @@ class Choice(models.Model):
     #profile model here
     #define stuff in model
     #Extend the built-in Django User model to include other fields like age, gender, birthday)
+    #due april 1st lol
