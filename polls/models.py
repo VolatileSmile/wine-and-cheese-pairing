@@ -2,7 +2,9 @@ import datetime
 from django.contrib import admin
 from django.db import models
 from django.utils import timezone
-
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
@@ -28,8 +30,20 @@ class Choice(models.Model):
     def __str__(self):
         return self.choice_text
 
-#class Profile(models.Model):
-    #profile model here
-    #define stuff in model
-    #Extend the built-in Django User model to include other fields like age, gender, birthday)
-    #due april 1st lol
+class Profile(models.Model):
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    bio = models.TextField(max_length=500, blank=True)
+    age = models.CharField(max_length=3, blank=True)
+    birth_date = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        return str(self.user)
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.profile.save()

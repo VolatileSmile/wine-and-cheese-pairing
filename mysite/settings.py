@@ -77,6 +77,8 @@ TEMPLATES = [
     },
 ]
 
+AUTH_USER_MODULE = 'DjangoPolls.Profile'
+
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 CRISPY_TEMPLATE_PACK = 'uni_form'

@@ -1,5 +1,4 @@
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Question
 from django.http import Http404
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse, reverse_lazy
@@ -7,7 +6,8 @@ from django.views import generic
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Question, Choice
+from .models import Question, Choice, Profile
+from django.contrib.auth.models import User
 
 class UserLoginView(LoginView):
     template_name = 'registration/login.html'
@@ -28,6 +28,15 @@ class SignUpView(generic.CreateView):
     success_message = "Your profile was created successfully"
     success_url = reverse_lazy('polls:index')
 
+# def registerPage(request):
+#     form = UserCreationForm
+
+#     if request.method == "POST":
+#         form = UserCreationForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+
+
 class DetailView(LoginRequiredMixin,generic.DetailView):
     model = Question
     template_name = 'polls/detail.html'
@@ -36,9 +45,15 @@ class ResultsView(LoginRequiredMixin,generic.DetailView):
     model = Question
     template_name = 'polls/results.html'
 
-# class ProfileView(LoginRequiredMixin,generic,DetailView):
-#     model = Profile
-#     template_name = 'registration/profile.html'
+class ProfileView(LoginRequiredMixin,generic.DetailView):
+    model = Profile
+    template_name = 'registration/profile.html'
+
+def update_profile(request, user_id):
+    user = User.objects.get(pk=user_id)
+    user.profile.bio = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...'
+    user.save()
+
 
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
