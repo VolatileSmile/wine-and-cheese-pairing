@@ -1,0 +1,20 @@
+{% extends 'polls/base.html' %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="% static 'polls/css/bootstrap.css' %">
+
+{% block title%}Edit Profile{% endblock %}
+{% block content %}
+
+<h1>Edit Profile</h1>
+
+<div class="form-grup">
+  <form method="POST">
+    {% csrf_token %}
+    {{ user_form.as_p }}
+    {{ profile_form.as_p }}
+    <button class="btn btn-secondary">Update Profile</button>
+  </form>
+</div>
+
+{% endblock %}

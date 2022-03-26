@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'polls/base.html' %}
 
 {% load static %}
 <link rel="stylesheet" type="text/css" href="% static 'polls/css/bootstrap.css' %">
@@ -6,11 +6,19 @@
 {% block content %}
 
 <h2>{{ user.get_full_name }}</h2>
-<ul>
-  <li>Username: {{ user.username }}</li>
-  <li>Bio: {{ user.profile.bio }}</li>
-  <li>Location: {{ user.profile.location }}</li>
-  <li>Birth Date: {{ user.profile.birth_date }}</li>
-</ul>
+
+<div class="form-group">
+  <form method="POST" enctype="multipart/form-data">
+  <ul>
+    <img src="{{ user.profile.avatar.url }}">
+    
+    <br/>
+    <li>Username: {{ user.username }}</li>
+    <li>Bio: {{ user.profile.bio }}</li>
+    <li>Age: {{ user.profile.age }}</li>
+    <li>Birth Date: {{ user.profile.birth_date }}</li>
+  </ul>
+</div>
+
 
 {% endblock %}

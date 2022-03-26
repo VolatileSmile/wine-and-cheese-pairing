@@ -13,7 +13,7 @@
             "args": [
                 "runserver"
             ],
-            "django": true
+            "django": false
         }
     ]
 }
