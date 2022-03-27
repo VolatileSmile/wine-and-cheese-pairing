@@ -39,6 +39,23 @@ class UserEditView(generic.UpdateView):
 #     user.profile.age = 
 #     user.profile.birth_date = 
 
+def edit_profile(request):
+    submitted = False
+    if request.method == "POST":
+        profile_form = ProfileForm(request.POST)
+        if profile_form.is_valid():
+            profile_form.save()
+            return HttpResponseRedirect('/edit_profile?submitted=True')
+    else:
+        profile_form = ProfileForm
+        if 'submitted' in request.GET:
+            submitted = True
+
+    return render(request, 'registration/edit_profile.html',{
+        'profile_form':profile_form,
+        'submitted':submitted,
+        })
+
 @transaction.atomic
 def update_profile(request):
     if request.method == 'POST':

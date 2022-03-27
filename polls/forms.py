@@ -1,27 +1,18 @@
+from django import forms
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
 from django.contrib.auth.models import User
 from .models import Profile
-from django import forms
 from django.forms import ModelForm
 
 class UserForm(ModelForm):
     class Meta:
         model = User
-        fields = (
-            'email',
-            'first_name',
-            'last_name'
-        )
+        fields = ('email',)
 
 class ProfileForm(ModelForm):
     class Meta:
         model = Profile
-        fields = (
-            'user',
-            'bio',
-            'age',
-            'birth_date'
-        )
+        fields = ('name', 'bio', 'age', 'birth_date')
 
 # class EditProfileForm(UserChangeForm):
 #     user = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class': 'form-control'}))

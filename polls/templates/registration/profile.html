@@ -5,7 +5,7 @@
 
 {% block content %}
 
-<h2>{{ user.get_full_name }}</h2>
+<h2>Hello {{ user.username }}!</h2>
 
 <div class="form-group">
   <form method="POST" enctype="multipart/form-data">
@@ -13,7 +13,7 @@
     <img src="{{ user.profile.avatar.url }}">
     
     <br/>
-    <li>Username: {{ user.username }}</li>
+    <li>Name: {{ user.profile.name }}</li>
     <li>Bio: {{ user.profile.bio }}</li>
     <li>Age: {{ user.profile.age }}</li>
     <li>Birth Date: {{ user.profile.birth_date }}</li>

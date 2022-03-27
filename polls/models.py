@@ -34,9 +34,11 @@ class Profile(models.Model):
     user = models.OneToOneField(User, default="Username", null=True, on_delete=models.CASCADE)
     #slug = models.SlugField(max_length = 250, null = True, blank = True)
     avatar = models.ImageField(blank=True, null=True, upload_to="images/") #holy shit i did it boys
-    bio = models.TextField(max_length=500, blank=True, default="This is a default bio")
-    age = models.CharField(max_length=3, blank=True, default="69")
-    birth_date = models.DateField(null=True, blank=True, default="2001-09-11")
+    #id = models.CharField(max_length=100, primary_key=True, blank=True, default="1")
+    name = models.CharField(max_length=200, blank=True)
+    bio = models.TextField(max_length=500, blank=True)
+    age = models.CharField(max_length=3, blank=True)
+    birth_date = models.DateField(null=True, blank=True)
 
     def __str__(self):
         return str(self.user)

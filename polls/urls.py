@@ -23,7 +23,8 @@ urlpatterns = [
     #path('profile/', views.ProfileView.as_view(template_name="registration/profile.html")),
     #path('accounts/profile/', views.ProfileView.as_view(template_name='registration/profile.html')),
     path('profile/', UserProfileView.as_view(), name='profile'),
-    path('edit_profile/', UserEditView.as_view(template_name="registration/edit_profile.html")),
+    path("edit_profile/", views.edit_profile, name="edit_profile"),
+    #path('edit_profile/', views.UserEditView(template_name="registration/edit_profile.html")),
     path("signup/", views.SignUpView.as_view(), name="signup"),
 
 ]
