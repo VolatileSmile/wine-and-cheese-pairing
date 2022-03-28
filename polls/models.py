@@ -31,10 +31,10 @@ class Choice(models.Model):
         return self.choice_text
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, default="Username", null=True, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     #slug = models.SlugField(max_length = 250, null = True, blank = True)
     avatar = models.ImageField(blank=True, null=True, upload_to="images/") #holy shit i did it boys
-    #id = models.CharField(max_length=100, primary_key=True, blank=True, default="1")
+    #id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200, blank=True)
     bio = models.TextField(max_length=500, blank=True)
     age = models.CharField(max_length=3, blank=True)

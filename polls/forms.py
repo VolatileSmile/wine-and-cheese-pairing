@@ -12,7 +12,7 @@ class UserForm(ModelForm):
 class ProfileForm(ModelForm):
     class Meta:
         model = Profile
-        fields = ('name', 'bio', 'age', 'birth_date')
+        fields = ('name', 'avatar', 'bio', 'age', 'birth_date',)
 
 # class EditProfileForm(UserChangeForm):
 #     user = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class': 'form-control'}))

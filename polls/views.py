@@ -42,17 +42,17 @@ class UserEditView(generic.UpdateView):
 def edit_profile(request):
     submitted = False
     if request.method == "POST":
-        profile_form = ProfileForm(request.POST)
-        if profile_form.is_valid():
-            profile_form.save()
+        form = ProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
             return HttpResponseRedirect('/edit_profile?submitted=True')
     else:
-        profile_form = ProfileForm
+        form = ProfileForm
         if 'submitted' in request.GET:
             submitted = True
 
     return render(request, 'registration/edit_profile.html',{
-        'profile_form':profile_form,
+        'form':form,
         'submitted':submitted,
         })
 

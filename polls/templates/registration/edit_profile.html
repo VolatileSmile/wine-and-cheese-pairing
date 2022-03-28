@@ -12,9 +12,9 @@
     Your profile was edited successfully!
 
   {% else %}
-    <form action="" method=POST>
+    <form action="" method=POST enctype="multipart/form-data">
       {% csrf_token %}
-      {{ profile_form.as_p }}
+      {{ form.as_p }}
 
       <input type="submit" value="Submit" class="btn btn-secondary">
 
