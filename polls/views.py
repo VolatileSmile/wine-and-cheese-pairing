@@ -26,7 +26,7 @@ class UserProfileView(generic.UpdateView):
         return self.request.user
 
 class UserEditView(generic.UpdateView):
-    form_class = UserForm
+    form_class = ProfileForm
     template_name = 'registration/edit_profile.html'
     success_url = reverse_lazy('polls:index')
 

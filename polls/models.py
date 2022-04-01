@@ -32,8 +32,9 @@ class Choice(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    avatar = models.ImageField(blank=True, null=True, upload_to="images/")
+    #user_id = models.OneToOneField(null=True, on_delete=models.CASCADE)
     name = models.CharField(max_length=200, blank=True)
+    avatar = models.ImageField(blank=True, null=True, upload_to="images/")
     bio = models.TextField(max_length=500, blank=True)
     age = models.CharField(max_length=3, blank=True)
     birthday = models.DateField(null=True, blank=True)
