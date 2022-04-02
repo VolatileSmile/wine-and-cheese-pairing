@@ -11,7 +11,10 @@
   <form method="POST" enctype="multipart/form-data">
   <ul>
     <img src="{{ user.profile.avatar.url }}">
-<!--current problem is that polls_profile does not exist.-->
+<!--new problem!! exists, but right now what happens is that 
+the old profile isn't being updated - a new one is being created.
+I need to figure out how to delete the old profile, or call the
+most recently updated version of the profile-->
    
     <br/>
     <li>Name: {{ user.profile.name }}</li>

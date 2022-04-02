@@ -4,6 +4,7 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views import generic
 from django.contrib import messages
+from django.views.generic import DetailView
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm,UserChangeForm
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -11,6 +12,7 @@ from .models import Question, Choice, Profile
 from django.contrib.auth.models import User
 from .forms import UserForm, ProfileForm
 from django.db import transaction
+from django.core.exceptions import MultipleObjectsReturned
 
 class UserLoginView(LoginView):
     template_name = 'registration/login.html'
@@ -33,6 +35,24 @@ class UserEditView(generic.UpdateView):
     def get_object(self):
         return self.request.user
 
+    def form_valid(self, form):
+        form.instance.created_by = self.request.user
+        form.instance.user = Profile.objects.get(user=self.request.user)
+        return super(UserEditView, self).form_valid(form)
+
+class ShowProfilePageView(DetailView):
+    model = Profile
+    template_name = 'registration/profile.html'
+
+    def get_context_data(self, *args, **kwargs):
+        users = Profile.objects.all()
+        context = super(ShowProfilePageView, self).get_context_data(*args,**kwargs)
+        page_user = get_object_or_404(Profile, id=self.kwargs['pk'])
+        context["page_user"] = page_user
+        return context
+        
+
+
 # def update_profile(request, user_id):
 #     user = User.objects.get(pk=user_id)
 #     user.profile.bio = 
@@ -44,7 +64,13 @@ def edit_profile(request):
     if request.method == "POST":
         form = ProfileForm(request.POST, request.FILES)
         if form.is_valid():
+            form = form.save(commit=False)
+            form.user=request.user
             form.save()
+            #try:
+                #Profile.objects.get(name=User)
+            #except MultipleObjectsReturned:
+                #Profile.objects.filter(name=User).last()
             return HttpResponseRedirect('/edit_profile?submitted=True')
     else:
         form = ProfileForm

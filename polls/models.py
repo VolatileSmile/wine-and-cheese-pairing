@@ -1,10 +1,12 @@
 import datetime
 from django.contrib import admin
 from django.db import models
+from django.conf import settings
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.utils.text import slugify
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
@@ -32,21 +34,35 @@ class Choice(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    #user_id = models.OneToOneField(null=True, on_delete=models.CASCADE)
-    name = models.CharField(max_length=200, blank=True)
-    avatar = models.ImageField(blank=True, null=True, upload_to="images/")
-    bio = models.TextField(max_length=500, blank=True)
-    age = models.CharField(max_length=3, blank=True)
-    birthday = models.DateField(null=True, blank=True)
+    #id = models.OneToOneField(User, primary_key=True, db_column="id", on_delete=models.CASCADE)
+    #slug = models.SlugField(blank=True, null=True)
+    name = models.CharField(verbose_name="name", max_length=200, blank=True)
+    avatar = models.ImageField(verbose_name="avatar", blank=True, null=True, upload_to="images/")
+    bio = models.TextField(verbose_name="bio", max_length=500, blank=True)
+    age = models.CharField(verbose_name="age", max_length=3, blank=True)
+    birthday = models.DateField(verbose_name="birthday", null=True, blank=True)
 
     def __str__(self):
         return str(self.user)
 
-@receiver(post_save, sender=User)
-def create_user_profile(sender, instance, created, **kwargs):
-    if created:
-        Profile.objects.create(user=instance)
+    #def save(self, *args, **kwargs):
+        #self.slug = slugify(self.name, self.avatar, self.bio, self.age, self.birthday)
+        #super().save(*args, **kwargs)
+        #if self.slug is None:
+            #self.slug = slugify(self.name, self.avatar, self.bio, self.age, self.birthday)
+            #self.save()
 
-@receiver(post_save, sender=User)
-def save_user_profile(sender, instance, **kwargs):
-    instance.profile.save()
+
+    def updateUserProfile(sender, instance, created, **kwargs):
+        if created:
+            Profile.objects.create(user=instance)
+        instance.profile.save()
+
+# @receiver(post_save, sender=User)
+# def create_user_profile(sender, instance, created, **kwargs):
+#     if created:
+#         Profile.objects.create(user=instance)
+
+# @receiver(post_save, sender=User)
+# def save_user_profile(sender, instance, **kwargs):
+#     instance.profile.save()

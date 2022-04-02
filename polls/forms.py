@@ -14,6 +14,7 @@ class ProfileForm(ModelForm):
         model = Profile
         fields = ('name', 'avatar', 'bio', 'age', 'birthday',)
 
+
 # class EditProfileForm(UserChangeForm):
 #     user = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class': 'form-control'}))
 #     bio = forms.CharField(max_length=300, widget=forms.TextInput(attrs={'class': 'form-control'}))
