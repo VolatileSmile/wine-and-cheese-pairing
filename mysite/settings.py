@@ -31,8 +31,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '0.0.0.0',
     '127.0.0.1',
-    'stormy-wildwood-51505.herokuapp.com'
-    'djangopollsali.herokuapp.com'
+    'stormy-wildwood-51505.herokuapp.com',
 ]
 
 # Application definition
