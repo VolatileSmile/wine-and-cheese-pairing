@@ -45,6 +45,11 @@ class Profile(models.Model):
     def __str__(self):
         return str(self.user)
 
+    def save(self, *args, force_insert=False, **kwargs):
+        if self.pk is None or force_insert:
+            Profile.objects.filter(user_id=self.user_id).delete()
+        return super().save(*args, force_insert=force_insert, **kwargs)
+
     #def save(self, *args, **kwargs):
         #self.slug = slugify(self.name, self.avatar, self.bio, self.age, self.birthday)
         #super().save(*args, **kwargs)

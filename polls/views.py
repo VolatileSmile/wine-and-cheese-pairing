@@ -1,3 +1,4 @@
+from tkinter import CASCADE
 from django.http import HttpResponse, HttpResponseRedirect
 from django.http import Http404
 from django.shortcuts import render, get_object_or_404
@@ -66,6 +67,7 @@ def edit_profile(request):
         if form.is_valid():
             form = form.save(commit=False)
             form.user=request.user
+            Profile.save
             form.save()
             #try:
                 #Profile.objects.get(name=User)
