@@ -135,14 +135,14 @@
     {
         "red" : {
             "full" : {
-                "name" : "Pinot Noir",
-                "description" : "A light-bodied red wine. During the phases of maturation, it can grow from having a fruity aroma to a vegetal one, increasing the complexity.",
-                "winepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016302332788604978/pinot_noir.png",
-                "pair" : "Gruyère",
-                "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016301213303701504/Gruyere-Cheese-Substitute-sq.jpg",
-                "pairdesc" : "A rich-flavoured hard cheese from Switzerland. In has a creamy and nutty flavour when young, but grows more complex, earthy, and grainy as it matures.",
-                "wiki" : "https://en.wikipedia.org/wiki/Pinot_noir",
-                "cheesewiki" : "https://en.wikipedia.org/wiki/Gruyère_cheese"
+                "name" : "Shiraz",
+                "description" : "A powerful and full-bodied red wine with earthy, savoury flavours. Depending on the country of origin, its taste ranges from berries to black pepper. ",
+                "winepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016276682551853056/Capture_decran_2022-09-05_a_5.20.33_PM.png",
+                "pair" : "Roncal",
+                "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016276559914610728/20140600000.0.jpg",
+                "pairdesc" : "A strong-flavoured and moderately hard cheese produced with sheep's milk from Spain. It is classified as a PDO, meaning that it only comes from the Valle de Roncal region of Spain.",
+                "wiki" : "https://en.wikipedia.org/wiki/Syrah",
+                "cheesewiki" : "https://en.wikipedia.org/wiki/Roncal_cheese"
             },
             "mid" : {
                 "name" : "Merlot",
@@ -155,14 +155,14 @@
                 "cheesewiki" : "https://en.wikipedia.org/wiki/Gouda_cheese"
             },
             "light" : {
-                "name" : "Shiraz",
-                "description" : "A powerful and full-bodied red wine with earthy, savoury flavours. Depending on the country of origin, its taste ranges from berries to black pepper. ",
-                "winepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016276682551853056/Capture_decran_2022-09-05_a_5.20.33_PM.png",
-                "pair" : "Roncal",
-                "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016276559914610728/20140600000.0.jpg",
-                "pairdesc" : "A strong-flavoured and moderately hard cheese produced with sheep's milk from Spain. It is classified as a PDO, meaning that it only comes from the Valle de Roncal region of Spain.",
-                "wiki" : "https://en.wikipedia.org/wiki/Syrah",
-                "cheesewiki" : "https://en.wikipedia.org/wiki/Roncal_cheese"
+                "name" : "Pinot Noir",
+                "description" : "A light-bodied red wine. During the phases of maturation, it can grow from having a fruity aroma to a vegetal one, increasing the complexity.",
+                "winepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016302332788604978/pinot_noir.png",
+                "pair" : "Gruyère",
+                "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016301213303701504/Gruyere-Cheese-Substitute-sq.jpg",
+                "pairdesc" : "A rich-flavoured hard cheese from Switzerland. In has a creamy and nutty flavour when young, but grows more complex, earthy, and grainy as it matures.",
+                "wiki" : "https://en.wikipedia.org/wiki/Pinot_noir",
+                "cheesewiki" : "https://en.wikipedia.org/wiki/Gruyère_cheese"
             }
         },
         "white" : {
