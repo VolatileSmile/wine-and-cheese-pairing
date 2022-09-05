@@ -1,0 +1,154 @@
+{% extends 'polls/orange.html' %}
+
+{% block content %}
+
+<script>
+    flavour = ""
+    texture = ""
+    cheesename = ""
+    function selectOne(checkbox){
+        var checkboxes = document.getElementsByName('check')
+        checkboxes.forEach((item) => {
+    if (item != checkbox) item.checked = false
+})
+    }
+    function findChecked(){
+        let box;
+        var checkboxes = document.getElementsByName('check')
+        checkboxes.forEach((item) => {
+    if (item.checked) box = item
+})
+    return box
+    }
+    function nextPage(from ,to){
+        let checked = findChecked()
+        if (!checked){
+            text = document.getElementById("didntcheck")
+            text.style.visibility="visible"
+            console.log("letsgoooooooooooooooooooooooo")
+            return
+        }
+        
+        if (from == "page1"){
+            flavour = checked.value
+        }
+        if (from == "page2"){
+            texture = checked.value
+            var data;
+            function get(d){
+                console.log(d)
+                cheese_table = d['cheese']
+
+            output_cheese =cheese_table[flavour][texture]
+            console.log(output_cheese)
+            output_object = document.getElementById("response");
+            desc_object = document.getElementById("description");
+            pair_object = document.getElementById("pair");
+            pairdesc_object = document.getElementById("pairdesc");
+            wiki_object = document.getElementById("wiki");
+            winewiki_object = document.getElementById("winewiki");
+            output_object.innerHTML = output_cheese['name']
+            desc_object.innerHTML = output_cheese['description']
+            pair_object.innerHTML = output_cheese['pair']
+            pairdesc_object.innerHTML = output_cheese['pairdesc']
+            wiki_object.href = output_cheese['wiki']
+            winewiki_object.href = output_cheese['winewiki']
+            img_object = document.getElementById("cheesepic");
+            pairimg_object = document.getElementById("pairpic");
+            img_object.src =  output_cheese['cheesepic']
+            pairimg_object.src =  output_cheese['pairpic']
+            console.log(document.getElementById("cheesepic"))
+            }
+            fetch("../static/polls/data.json")
+  .then(response => response.json())
+  .then(json => get(json));
+            
+            
+        }
+        from = document.getElementById(from);
+        to = document.getElementById(to);
+
+        to.style.visibility="visible";
+        from.remove()
+    }
+</script>
+
+<div class="container">
+    <div id = "page1" 
+     style="width: 30%; margin-left:40%;
+    margin-right: 20px;
+    float: left;
+    padding: 20px;">
+
+    <!-- class='row w-100'  -->
+
+        <h1>Flavour</h1>
+        <input type="checkbox" id="flavour" name="check" value = "strong" onclick="selectOne(this)">
+        <label>Strong</label>
+        <br>
+        <input type="checkbox" id="flavour" name="check" value = "rich" onclick="selectOne(this)">
+        <label>Rich</label>
+        <br>
+        <input type="checkbox" id="flavour" name="check" value = "creamy" onclick="selectOne(this)">
+        <label>Creamy</label>
+        <br>
+        <input type="checkbox" id="flavour" name="check" value = "light" onclick="selectOne(this)">
+        <label>Light</label>
+
+
+        <br>
+        <br>
+        <a id = "didntcheck" style="visibility:hidden; color:red;">Please pick one</a>
+        <br>
+        <a onclick="nextPage('page1', 'page2')">Next Page</a>
+    </div>
+
+<div id="page2" style="width: 30%;
+margin-left:40%;
+float: left;
+margin-right: 20px;
+padding: 20px; visibility:hidden">
+    <h1>Texture</h1>
+    <input type="checkbox" id="texture" name="check" value = "hard" onclick="selectOne(this)">
+    <label>Hard</label>
+    <br>
+    <input type="checkbox" id="texture" name="check" value = "medium" onclick="selectOne(this)">
+    <label>Medium</label>
+    <br>
+    <input type="checkbox" id="texture" name="check" value = "soft" onclick="selectOne(this)">
+    <label>Soft</label>
+
+    
+    <br>
+    <br>
+    <button type="submit" id="submit" value="Submit" onclick="nextPage('page2', 'results')">Submit</button>
+
+</div>
+
+<div id="results"  style = "visibility: hidden;">
+    <table width="80%" >
+        <tr>
+            <th><h1><i>Recommendation:</i></h1></th>
+            <th> <h1><i>Pairing:</i></h1></th>
+        </tr>
+        <tr>
+            <td><h2 id = "response"></h2></td>
+            <td><h2 id="pair"></h2></td>
+        </tr>
+        <tr>
+            <td><img id='cheesepic' width="250px" length="250px" ></img></td>
+            <td><img id='pairpic' width="250px" length="250px"></img></td>
+        </tr>
+        <tr>
+            <td><i id="description"></i></td>
+            <td><i id="pairdesc"></i></td>
+        </tr>
+        <tr>
+            <td><a id="wiki">Click here for more info</a></td>
+            <td><a id="winewiki">Click here for more info</a></td>
+        </tr>
+    </table>
+   
+</div>
+
+{% endblock %}

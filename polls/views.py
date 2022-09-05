@@ -198,3 +198,35 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+def cheese(request):
+    '''try:
+        if request.method=="POST":
+            cheese_table = {
+                "strong" : {
+                    "hard" : "Parmigiano-Reggiano",
+                    "medium" : "Roncal",
+                    "soft" : "Gorgonzola"
+                },
+                "rich" : {
+                    "hard" : "Gruyère",
+                    "medium" : "Gouda",
+                    "soft" : "Camembert"
+                }
+            }
+            data = request.POST
+            flavor = data["flavor"]
+            texture = data["texture"]
+
+    except:
+        pass'''
+    return render(request, 'polls/cheese.html')
+
+def wine(request):
+    return render(request, 'polls/wine.html')
+
+def home(request):
+    return render(request, 'polls/home.html')
+
+def glossary(request):
+    return render(request, 'polls/glossary.html')

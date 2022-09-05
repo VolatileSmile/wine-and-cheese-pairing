@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% include 'polls/header.html' %}
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+
+        <!-- <script>
+            document.getElementById("cheesepairbutton").onclick = function () {
+                location.href = "x";
+            };
+            
+            document.getElementById("winepairbutton").onclick = function () {
+                location.href = "x";
+            };
+
+            document.getElementById("glossarybutton").onclick = function () {
+                location.href = "www.yoursite.com";
+            };
+        </script> -->
+
+        <table>
+            <tr>
+                <th> <input onclick="location.href='/cheese/'" id="cheesepair" type="image" style="width: 500px;"
+                    src="https://cdn.discordapp.com/attachments/974691474669187072/1014125272951427082/cheese.png">
+                </th>
+            </tr>
+            <tr>
+                <th> <input onclick="location.href='/wine/'" id="winepair" type="image" style="width: 500px;"
+                    src="https://cdn.discordapp.com/attachments/974691474669187072/1014125274138415205/wine.png" /></th>
+            </tr>
+            <!-- <tr>
+                <th><input onclick="location.href='/glossary/'" id="glossarybutton" type="image" style="width: 500px;"
+                    src="https://cdn.discordapp.com/attachments/974691474669187072/1014125273333104732/glossary.png" /></th>
+            </tr> -->
+        </table>
+
+        {% endblock %}
+    </div>
+</body>
+<style>
+    body {
+        /* background-image: url("https://cdn.discordapp.com/attachments/974691474669187072/1013763118842781756/background1.png");
+        background-repeat: no-repeat;
+        /* background-size: auto; */
+        /* width:"500%";
+        height:"500%"; */
+        background-color: rgb(251,227,107)
+    }
+
+</style>
+<footer>
+    {% include "polls/footer.html" %}
+</footer>
+</html>

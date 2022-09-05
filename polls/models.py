@@ -50,14 +50,6 @@ class Profile(models.Model):
             Profile.objects.filter(user_id=self.user_id).delete()
         return super().save(*args, force_insert=force_insert, **kwargs)
 
-    #def save(self, *args, **kwargs):
-        #self.slug = slugify(self.name, self.avatar, self.bio, self.age, self.birthday)
-        #super().save(*args, **kwargs)
-        #if self.slug is None:
-            #self.slug = slugify(self.name, self.avatar, self.bio, self.age, self.birthday)
-            #self.save()
-
-
     def updateUserProfile(sender, instance, created, **kwargs):
         if created:
             Profile.objects.create(user=instance)

@@ -27,5 +27,9 @@ urlpatterns = [
     path("edit_profile/", views.edit_profile, name="edit_profile"),
     #path('edit_profile/', views.UserEditView(template_name="registration/edit_profile.html")),
     path("signup/", views.SignUpView.as_view(), name="signup"),
+    path('cheese/', views.cheese, name="cheese"),
+    path('wine/', views.wine, name="wine"),
+    path('home/', views.home, name="home"),
+    path('glossary/', views.glossary, name="glossary"),
 
 ]

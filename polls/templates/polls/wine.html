@@ -1,0 +1,146 @@
+{% extends 'polls/burgundy.html' %}
+
+{% block content %}
+
+<script>
+    type = ""
+    body = ""
+    function selectOne(checkbox){
+        var checkboxes = document.getElementsByName('check')
+        checkboxes.forEach((item) => {
+    if (item != checkbox) item.checked = false
+})
+    }
+    function findChecked(){
+        let box;
+        var checkboxes = document.getElementsByName('check')
+        checkboxes.forEach((item) => {
+    if (item.checked) box = item
+})
+    return box
+    }
+    function nextPage(from ,to){
+        let checked = findChecked()
+        if (!checked){
+            text = document.getElementById("didntcheck")
+            text.style.visibility="visible"
+            console.log("letsgoooooooooooooooooooooooo")
+            return
+        }
+        
+        if (from == "page1"){
+            type = checked.value
+        }
+        if (from == "page2"){
+            body = checked.value
+            var data;
+            function get(winedata){
+                console.log(winedata)
+                wine_table = winedata['wine']
+
+
+            output_wine = wine_table[type][body] 
+            console.log(output_wine)
+            output_object = document.getElementById("response");
+            desc_object = document.getElementById("description");
+            pair_object = document.getElementById("pair");
+            pairdesc_object = document.getElementById("pairdesc");
+            wiki_object = document.getElementById("wiki");
+            cheesewiki_object = document.getElementById("cheesewiki");
+            output_object.innerHTML = output_wine['name']
+            desc_object.innerHTML = output_wine['description']
+            pair_object.innerHTML = output_wine['pair']
+            pairdesc_object.innerHTML = output_wine['pairdesc']
+            img_object = document.getElementById("winepic");
+            pairimg_object = document.getElementById("pairpic");
+            img_object.src =  output_wine['winepic']
+            wiki_object.href = output_wine['wiki']
+            cheesewiki_object.href = output_wine['cheesewiki']
+            pairimg_object.src =  output_wine['pairpic']
+            console.log(document.getElementById("winepic"))
+            }
+            fetch("../static/polls/data.json")
+  .then(response => response.json())
+  .then(json => get(json));
+            
+
+        }
+        from = document.getElementById(from);
+        to = document.getElementById(to);
+
+        to.style.visibility="visible";
+        from.remove()
+    }
+</script>
+
+<div class="container">
+    <div id = "page1" 
+     style="width: 30%; margin-left:40%;
+    margin-right: 20px;
+    float: left;
+    padding: 20px;">
+
+    <!-- class='row w-100'  -->
+
+        <h1 style="color: white"> Type</h1>
+        <input type="checkbox" id="type" name="check" value = "red" onclick="selectOne(this)">
+        <label style="color: white">Red</label>
+        <br>
+        <input type="checkbox" id="type" name="check" value = "white" onclick="selectOne(this)">
+        <label style="color: white">White</label>
+
+        <br>
+        <a id = "didntcheck" style="visibility:hidden; color:red;">Please pick one</a>
+        <br>
+        <a onclick="nextPage('page1', 'page2')" style="color: white">Next Page</a>
+    </div>
+
+<div id="page2" style="width: 30%;
+margin-left:40%;
+float: left;
+margin-right: 20px;
+padding: 20px; visibility:hidden">
+    <h1 style="color: white">Body</h1>
+    <input type="checkbox" id="body" name="check" value = "full" onclick="selectOne(this)">
+    <label style="color: white">Full</label>
+    <br>
+    <input type="checkbox" id="body" name="check" value = "mid" onclick="selectOne(this)">
+    <label style="color: white">Medium</label>
+    <br>
+    <input type="checkbox" id="body" name="check" value = "light" onclick="selectOne(this)">
+    <label style="color: white">Light</label>
+
+    <br>
+    <br>
+    <button type="submit" id="submit" value="Submit" onclick="nextPage('page2', 'results')" >Submit</button>
+
+</div>
+
+<div id="results"  style = "visibility: hidden;" style="margin-left: auto; margin-right: auto;">
+    <table width="80%" >
+        <tr>
+            <th> <h1 style="color: white">Recommendation:</h1></th>
+            <th> <h1 style="color: white">Pairing:</h1></th>
+        </tr>
+        <tr>
+            <td><h2 style="color: white" id = "response"></h2></td>
+            <td><h2 style="color: white" id="pair"></h2></td>
+        </tr>
+        <tr>
+            <td><img id='winepic' width="250px" length="250px" ></img></td>
+            <td><img id='pairpic' width="250px" length="250px"></img></td>
+        </tr>
+        <tr>
+            <td><i style="color: white" id="description"></i></td>
+            <td><i style="color: white" id="pairdesc"></i></td>
+        </tr>
+        <br>
+        <tr>
+            <td><a id="wiki" style="color: white">Click here for more info</a></td>
+            <td><a id="cheesewiki" style="color: white">Click here for more info</a></td>
+        </tr>
+    </table>
+   
+</div>
+
+{% endblock %}

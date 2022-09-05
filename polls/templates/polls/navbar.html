@@ -28,6 +28,7 @@
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
+        color: rgba(255,206,31,255);
         text-anchor: middle;
         -webkit-user-select: none;
         -moz-user-select: none;
@@ -47,17 +48,28 @@
   </head>
   <body>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4" color="rgba(255,206,31,255)">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/polls/">Poll-itically Correct</a>
+    <a class="navbar-brand" href="/home/">Wine & Cheese Pairing</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/polls/">Home</a>
+          <a class="nav-link active" aria-current="page" href="/home/">Home</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/cheese/">Cheese Selection</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/wine/">Wine Selection</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/glossary/">Glossary</a>
+        </li> -->
+
+        <!--
         <li class="nav-item">
           {% if request.user.is_authenticated %}
             <a class="nav-link active" active href="/accounts/logout/">Logout</a>
@@ -77,10 +89,11 @@
           {% else %}
           {% endif %}
         </li>
+      
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-success" type="submit">Search</button> -->
       </form>
     </div>
   </div>
