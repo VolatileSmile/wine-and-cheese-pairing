@@ -167,14 +167,14 @@
         },
         "white" : {
             "full" : {
-                "name" : "Pinot Grigio",
-                "description" : "A light-bodied white wine with a rich, floral bouquet of taste. It is acidic to the point of crispy spiciness, and a slight fruity sweetness.",
-                "winepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016277775948193862/grigio.png",
-                "pair" : "Parmigiano-Reggiano",
-                "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1014431069296132146/81mWrFuoJuL._SL1500_.jpg",
-                "pairdesc" : "A strong-flavoured hard cheese produced with cow's milk and aged for at least 12 months. It has a strong umami taste and consists of granular cheese crystals, which are high in amino acids.",
-                "wiki" : "https://en.wikipedia.org/wiki/Pinot_gris",
-                "cheesewiki" : "https://en.wikipedia.org/wiki/Parmesan"
+                "name" : "Oaked Chardonnay",
+                "description" : "A full-bodied white wine with a softer acidity. It has a notably fruity flavour reminiscent of earthy hazelnuts (caused by the oaking process), giving a buttery feeling overall.",
+                "winepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016282690955268156/chardonnay.png",
+                "pair" : "Camembert",
+                "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016283377399234580/Baked-Camembert-Featured.jpg",
+                "pairdesc" : "A rich, soft-textured cheese made of cow's milk that is moist and creamy. It is best eaten when molten after baking with nuts, rosemary, and garlic cloves.",
+                "wiki" : "https://en.wikipedia.org/wiki/Chardonnay",
+                "cheesewiki" : "https://en.wikipedia.org/wiki/Camembert"
             },
             "mid" : {
                 "name" : "Dry Riesling",
@@ -187,14 +187,14 @@
                 "cheesewiki" : "https://en.wikipedia.org/wiki/Gorgonzola"
             },
             "light" : {
-                "name" : "Oaked Chardonnay",
-                "description" : "A full-bodied white wine with a softer acidity. It has a notably fruity flavour reminiscent of earthy hazelnuts (caused by the oaking process), giving a buttery feeling overall.",
-                "winepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016282690955268156/chardonnay.png",
-                "pair" : "Camembert",
-                "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016283377399234580/Baked-Camembert-Featured.jpg",
-                "pairdesc" : "A rich, soft-textured cheese made of cow's milk that is moist and creamy. It is best eaten when molten after baking with nuts, rosemary, and garlic cloves.",
-                "wiki" : "https://en.wikipedia.org/wiki/Chardonnay",
-                "cheesewiki" : "https://en.wikipedia.org/wiki/Camembert"
+                "name" : "Pinot Grigio",
+                "description" : "A light-bodied white wine with a rich, floral bouquet of taste. It is acidic to the point of crispy spiciness, and a slight fruity sweetness.",
+                "winepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016277775948193862/grigio.png",
+                "pair" : "Parmigiano-Reggiano",
+                "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1014431069296132146/81mWrFuoJuL._SL1500_.jpg",
+                "pairdesc" : "A strong-flavoured hard cheese produced with cow's milk and aged for at least 12 months. It has a strong umami taste and consists of granular cheese crystals, which are high in amino acids.",
+                "wiki" : "https://en.wikipedia.org/wiki/Pinot_gris",
+                "cheesewiki" : "https://en.wikipedia.org/wiki/Parmesan"
             }
         }
     }
