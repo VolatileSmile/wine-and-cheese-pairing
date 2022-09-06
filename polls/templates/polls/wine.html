@@ -57,12 +57,13 @@
             wiki_object.href = output_wine['wiki']
             cheesewiki_object.href = output_wine['cheesewiki']
             pairimg_object.src =  output_wine['pairpic']
-            console.log(document.getElementById("winepic"))
+            console.log(output_wine)
             }
-            fetch("../static/polls/data.json")
+
+            fetch("../static/polls/info.json")
   .then(response => response.json())
   .then(json => get(json));
-            
+           
 
         }
         from = document.getElementById(from);

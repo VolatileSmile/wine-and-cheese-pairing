@@ -1,0 +1,204 @@
+{
+    "cheese" : 
+        {
+            "strong" : {
+                "hard" : {
+                    "name" : "Parmigiano-Reggiano",
+                    "description" : "A strong-flavoured hard cheese produced with cow's milk and aged for at least 12 months. It has a strong umami taste and consists of granular cheese crystals, which are high in amino acids.",
+                    "cheesepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1014431069296132146/81mWrFuoJuL._SL1500_.jpg",
+                    "pair" : "Pinot Grigio",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016277775948193862/grigio.png",
+                    "pairdesc" : "A light-bodied white wine with a rich, floral bouquet of taste. It is acidic to the point of crispy spiciness, and a slight fruity sweetness.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Parmesan",
+                    "winewiki" : "https://en.wikipedia.org/wiki/Pinot_gris"
+                },
+                "medium" : {
+                    "name" : "Roncal",
+                    "description" : "A strong-flavoured and moderately hard cheese produced with sheep's milk from Spain. It is classified as a PDO, meaning that it only comes from the Valle de Roncal region of Spain.",
+                    "cheesepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016276559914610728/20140600000.0.jpg",
+                    "pair" : "Shiraz",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016276682551853056/Capture_decran_2022-09-05_a_5.20.33_PM.png",
+                    "pairdesc" : "A powerful and full-bodied red wine with earthy, savoury flavours. Depending on the country of origin, its taste ranges from berries to black pepper.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Roncal_cheese",
+                    "winewiki" : "https://en.wikipedia.org/wiki/Syrah"
+                },
+                "soft" : {
+                    "name" : "Gorgonzola",
+                    "description" : "A strong-flavoured soft blue cheese, made with unskimmed cow's milk from Italy. It has a buttery and salty flavour in its veins.",
+                    "cheesepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016277854155177994/gorgonzola-piccante-blue-cheese_2.5kg_1.jpg",
+                    "pair" : "Riesling",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016277853928693811/2017-riesling-american-675x675.jpg",
+                    "pairdesc" : "A medium-body white wine with a perfumey aroma. It has a sweet and highly acidic taste that is terroir-expressive, meaning highly dependent on place of origin.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Gorgonzola",
+                    "winewiki" : "https://en.wikipedia.org/wiki/Riesling"
+                }
+            },
+            "rich" : {
+                "hard" : {
+                    "name" : "Gruyère",
+                    "description" : "A rich-flavoured hard cheese from Switzerland. In has a creamy and nutty flavour when young, but grows more complex, earthy, and grainy as it matures.",
+                    "cheesepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016301213303701504/Gruyere-Cheese-Substitute-sq.jpg",
+                    "pair" : "Pinot Noir",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016302332788604978/pinot_noir.png",
+                    "pairdesc" : "A light-bodied red wine. During the phases of maturation, it can grow from having a fruity aroma to a vegetal one, increasing the complexity.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Gruyère_cheese",
+                    "winewiki" : "https://en.wikipedia.org/wiki/Pinot_noir"
+                },
+                "medium" : {
+                    "name" : "Gouda",
+                    "description" : "A rich-flavoured and moderately hard cow's milk cheese originating from the Netherlands. It is sweet and creamy, and gets progressively richer the more aged it is.",
+                    "cheesepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016284378143399976/gouda.png",
+                    "pair" : "Merlot",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016284378453770280/merlot.png",
+                    "pairdesc" : "A medium-bodied red wine that is dry and moderately acidic. It has a low level of alcohol due to the fresh, fruity, and leafy flavours.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Gouda_cheese",
+                    "winewiki" : "https://en.wikipedia.org/wiki/Merlot"
+                },
+                "soft" : {
+                    "name" : "Camembert",
+                    "description" : "A rich, soft-textured cheese made of cow's milk that is moist and creamy. It is best eaten when molten after baking with nuts, rosemary, and garlic cloves.",
+                    "cheesepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016283377399234580/Baked-Camembert-Featured.jpg",
+                    "pair" : "Oaked Chardonnay",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016282690955268156/chardonnay.png",
+                    "pairdesc" : "A light-bodied white wine with a softer acidity. It has a notably fruity flavour reminiscent of earthy hazelnuts (caused by the oaking process), giving a buttery feeling overall.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Camembert",
+                    "winewiki" : "https://en.wikipedia.org/wiki/Chardonnay"
+                }
+            },
+            "creamy" : {
+                "hard" : {
+                    "name" : "Comté",
+                    "description" : "A creamy hard cheese made of unpasturised cow's milk. It has a mild and slightly sweet flavour, coupled with a malleable texture.",
+                    "cheesepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016316044706594856/Capture_decran_2022-09-05_a_7.56.59_PM.png",
+                    "pair" : "Amontillado",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016316378153750528/Capture_decran_2022-09-05_a_7.58.14_PM.png",
+                    "pairdesc" : "A varient of Spanish sherry wine named after the Montillo region in Spain. It has a nutty aroma similar to tobacco, and is used as an apértif or to pair with soups as well.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Comté_cheese",
+                    "winewiki" : "https://en.wikipedia.org/wiki/Amontillado"
+                },
+                "medium" : {
+                    "name" : "Brie de Meaux",
+                    "description" : "A creamy cheese with a moderately soft rind and texture. It has a gooey yet delicate flavour, and is notable for its rubbery, though rubbery, rind.",
+                    "cheesepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016317630354821210/Briedemeaux.jpg",
+                    "pair" : "Sauvignon Blanc",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016317630585511957/saublanc.png",
+                    "pairdesc" : "A white wine whose body depends on the range of climates that the grapes are cultivated in - from aggressive grassiness to tropical sweetness. It is crisp, elegant, and fresh.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Brie_de_Meaux",
+                    "winewiki" : "https://en.wikipedia.org/wiki/Sauvignon_blanc"
+                },
+                "soft" : {
+                    "name" : "Burrata",
+                    "description" : "A soft and creamy Italian cheese made of the remains of mozzarella. While the outside is solid, the inside is made of straciatella, a creamy filling made of shredded buffalo milk.",
+                    "cheesepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016320209440747530/Tomato-burrata-salad-5.jpg",
+                    "pair" : "Pinot Grigio",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016277775948193862/grigio.png",
+                    "pairdesc" : "A light-bodied white wine with a rich, floral bouquet of taste. It is acidic to the point of crispy spiciness, and a slight fruity sweetness.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Burrata",
+                    "winewiki" : "https://en.wikipedia.org/wiki/Pinot_gris"
+                }
+            },
+            "light" : {
+                "hard" : {
+                    "name" : "Manchego",
+                    "description" : "A light-flavoured hard cheese made of Spanish sheep milk. It has a slight piquancy (sharpness) to its flavour, and has a long aftertaste.",
+                    "cheesepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016322791689162752/manchego.png",
+                    "pair" : "Cava",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016322791936643134/cava.jpg",
+                    "pairdesc" : "A white sparkling wine from Spain, with similar fizziness as Champagne. It is served with Spanish cold cuts depending on its dryness or sweetness.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Manchego",
+                    "winewiki" : "https://en.wikipedia.org/wiki/Cava_(Spanish_wine)"
+                },
+                "medium" : {
+                    "name" : "Cheddar",
+                    "description" : "A light-flavoured English cheese with a moderately hard texture. It is one of the most popular cheeses due to its affordability and unintrusive salty flavour on the palate. It is usually served hot in combination with other foods such as salads or sandwiches.",
+                    "cheesepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016323531853807676/Queso-Cheddar.jpg",
+                    "pair" : "Pinot Noir",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016302332788604978/pinot_noir.png",
+                    "pairdesc" : "A light-bodied red wine. During the phases of maturation, it can grow from having a fruity aroma to a vegetal one, increasing the complexity.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Cheddar_cheese",
+                    "winewiki" : "https://en.wikipedia.org/wiki/Pinot_noir"
+                },
+                "soft" : {
+                    "name" : "Emmental",
+                    "description" : "A light-flavoured soft cheese made in Switzerland. It is famous for its hole-ridden shape, and has a mild but savoury taste. It is commonly found in gratins and fondues.",
+                    "cheesepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016326057537839145/emmental.png",
+                    "pair" : "Chardonnay",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016282690955268156/chardonnay.png",
+                    "pairdesc" : "A light-bodied white wine with a softer acidity. It has a notably fruity flavour reminiscent of earthy hazelnuts (caused by the oaking process), giving a buttery feeling overall.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Emmental_cheese",
+                    "winewiki" : "https://en.wikipedia.org/wiki/Chardonnay"
+                }
+            }
+        },
+    
+    "wine" : 
+        {
+            "red" : {
+                "full" : {
+                    "name" : "Shiraz",
+                    "description" : "A powerful and full-bodied red wine with earthy, savoury flavours. Depending on the country of origin, its taste ranges from berries to black pepper. ",
+                    "winepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016276682551853056/Capture_decran_2022-09-05_a_5.20.33_PM.png",
+                    "pair" : "Roncal",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016276559914610728/20140600000.0.jpg",
+                    "pairdesc" : "A strong-flavoured and moderately hard cheese produced with sheep's milk from Spain. It is classified as a PDO, meaning that it only comes from the Valle de Roncal region of Spain.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Syrah",
+                    "cheesewiki" : "https://en.wikipedia.org/wiki/Roncal_cheese"
+                },
+                "mid" : {
+                    "name" : "Merlot",
+                    "description" : "A medium-bodied red wine that is dry and moderately acidic. It has a low level of alcohol due to the fresh, fruity, and leafy flavours.",
+                    "winepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016284378453770280/merlot.png",
+                    "pair" : "Gouda",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016284378143399976/gouda.png",
+                    "pairdesc" : "A rich-flavoured and moderately hard cow's milk cheese originating from the Netherlands. It is sweet and creamy, and gets progressively richer the more aged it is.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Merlot",
+                    "cheesewiki" : "https://en.wikipedia.org/wiki/Gouda_cheese"
+                },
+                "light" : {
+                    "name" : "Pinot Noir",
+                    "description" : "A light-bodied red wine. During the phases of maturation, it can grow from having a fruity aroma to a vegetal one, increasing the complexity.",
+                    "winepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016302332788604978/pinot_noir.png",
+                    "pair" : "Gruyère",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016301213303701504/Gruyere-Cheese-Substitute-sq.jpg",
+                    "pairdesc" : "A rich-flavoured hard cheese from Switzerland. In has a creamy and nutty flavour when young, but grows more complex, earthy, and grainy as it matures.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Pinot_noir",
+                    "cheesewiki" : "https://en.wikipedia.org/wiki/Gruyère_cheese"
+                }
+            },
+            "white" : {
+                "full" : {
+                    "name" : "Oaked Chardonnay",
+                    "description" : "A full-bodied white wine with a softer acidity. It has a notably fruity flavour reminiscent of earthy hazelnuts (caused by the oaking process), giving a buttery feeling overall.",
+                    "winepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016282690955268156/chardonnay.png",
+                    "pair" : "Camembert",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016283377399234580/Baked-Camembert-Featured.jpg",
+                    "pairdesc" : "A rich, soft-textured cheese made of cow's milk that is moist and creamy. It is best eaten when molten after baking with nuts, rosemary, and garlic cloves.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Chardonnay",
+                    "cheesewiki" : "https://en.wikipedia.org/wiki/Camembert"
+                },
+                "mid" : {
+                    "name" : "Dry Riesling",
+                    "description" : "A medium-body white wine with a perfumey aroma. It has a sweet and highly acidic taste that is terroir-expressive, meaning highly dependent on place of origin.",
+                    "winepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016277853928693811/2017-riesling-american-675x675.jpg",
+                    "pair" : "Gorgonzola",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016277854155177994/gorgonzola-piccante-blue-cheese_2.5kg_1.jpg",
+                    "pairdesc" : "A medium-body white wine with a perfumey aroma. It has a sweet and highly acidic taste that is terroir-expressive, meaning highly dependent on place of origin.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Riesling",
+                    "cheesewiki" : "https://en.wikipedia.org/wiki/Gorgonzola"
+                },
+                "light" : {
+                    "name" : "Pinot Grigio",
+                    "description" : "A light-bodied white wine with a rich, floral bouquet of taste. It is acidic to the point of crispy spiciness, and a slight fruity sweetness.",
+                    "winepic" : "https://cdn.discordapp.com/attachments/974691474669187072/1016277775948193862/grigio.png",
+                    "pair" : "Parmigiano-Reggiano",
+                    "pairpic" : "https://cdn.discordapp.com/attachments/974691474669187072/1014431069296132146/81mWrFuoJuL._SL1500_.jpg",
+                    "pairdesc" : "A strong-flavoured hard cheese produced with cow's milk and aged for at least 12 months. It has a strong umami taste and consists of granular cheese crystals, which are high in amino acids.",
+                    "wiki" : "https://en.wikipedia.org/wiki/Pinot_gris",
+                    "cheesewiki" : "https://en.wikipedia.org/wiki/Parmesan"
+                }
+            }
+        }
+    }
+    
+    
+    
