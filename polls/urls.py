@@ -8,7 +8,6 @@ from .views import UserEditView, UserProfileView, ShowProfilePageView
 
 app_name = 'polls'
 urlpatterns = [
-    path('', views.IndexView.as_view(), name='index'),
     path('<int:pk>/', views.DetailView.as_view(), name='detail'),
     path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),
     #path('profile/', views.ProfileView.as_view(), name='profile'),
@@ -30,6 +29,7 @@ urlpatterns = [
     path('cheese/', views.cheese, name="cheese"),
     path('wine/', views.wine, name="wine"),
     path('home/', views.home, name="home"),
+    path('', views.home, name="home"),
     path('glossary/', views.glossary, name="glossary"),
 
 ]
