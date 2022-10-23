@@ -24,7 +24,7 @@
         if (!checked){
             text = document.getElementById("didntcheck")
             text.style.visibility="visible"
-            console.log("letsgoooooooooooooooooooooooo")
+            console.log("nolol")
             return
         }
         
@@ -63,7 +63,7 @@
             fetch("../static/polls/info.json")
   .then(response => response.json())
   .then(json => get(json));
-           
+          
 
         }
         from = document.getElementById(from);
@@ -81,15 +81,12 @@
     float: left;
     padding: 20px;">
 
-    <!-- class='row w-100'  -->
-
         <h1 style="color: white"> Type</h1>
-        <input type="checkbox" id="type" name="check" value = "red" onclick="selectOne(this)">
+        <input type="radio" id="type" name="check" value = "red" onclick="selectOne(this)">
         <label style="color: white">Red</label>
         <br>
-        <input type="checkbox" id="type" name="check" value = "white" onclick="selectOne(this)">
+        <input type="radio" id="type" name="check" value = "white" onclick="selectOne(this)">
         <label style="color: white">White</label>
-
         <br>
         <a id = "didntcheck" style="visibility:hidden; color:red;">Please pick one</a>
         <br>
@@ -102,15 +99,17 @@ float: left;
 margin-right: 20px;
 padding: 20px; visibility:hidden">
     <h1 style="color: white">Body</h1>
-    <input type="checkbox" id="body" name="check" value = "full" onclick="selectOne(this)">
+    <input type="radio" id="body" name="check" value = "full" onclick="selectOne(this)">
     <label style="color: white">Full</label>
     <br>
-    <input type="checkbox" id="body" name="check" value = "mid" onclick="selectOne(this)">
+    <input type="radio" id="body" name="check" value = "mid" onclick="selectOne(this)">
     <label style="color: white">Medium</label>
     <br>
-    <input type="checkbox" id="body" name="check" value = "light" onclick="selectOne(this)">
+    <input type="radio" id="body" name="check" value = "light" onclick="selectOne(this)">
     <label style="color: white">Light</label>
 
+    <br>
+    <a id = "didntcheck" style="visibility:hidden; color:red;">Please pick one</a>
     <br>
     <br>
     <button type="submit" id="submit" value="Submit" onclick="nextPage('page2', 'results')" >Submit</button>
